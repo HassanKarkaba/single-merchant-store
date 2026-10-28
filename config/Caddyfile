@@ -1,0 +1,33 @@
+{
+  admin off
+  skip_install_trust
+  auto_https disable_redirects
+  local_certs
+  servers {
+    timeouts {
+      read_header 5s
+      read_body 10s
+      write 30s
+      idle 30s
+    }
+  }
+}
+{$SME_ORIGIN:https://localhost:8443} {
+  bind 127.0.0.1
+  tls internal
+  request_body {
+    max_size 1MB
+  }
+  @forbidden path /api/v1/sandbox/* /api/v1/logout /callbacks/*
+  respond @forbidden 404
+  reverse_proxy 127.0.0.1:{$SME_APP_PORT:8080} {
+    header_up Host {$SME_HOST:localhost:8443}
+    header_up X-Forwarded-Host {$SME_HOST:localhost:8443}
+    header_up X-Forwarded-Proto https
+    header_up -Forwarded
+    transport http {
+      dial_timeout 2s
+      response_header_timeout 30s
+    }
+  }
+}

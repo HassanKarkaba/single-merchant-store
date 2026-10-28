@@ -1,0 +1,68 @@
+[
+  {
+    "alt_text": "Illustrated synthetic tote",
+    "checksum": "6153990cd71c39eb0de8ede30e3072cf073c5c43e0c32c980241fc1236abfa3f",
+    "filename": "tote.svg",
+    "height": 480,
+    "id": "pf-tote",
+    "mime": "image/svg+xml",
+    "name": "Demo tote",
+    "url": "/assets/demo/tote.svg",
+    "width": 480
+  },
+  {
+    "alt_text": "Illustrated synthetic mug",
+    "checksum": "41a284432068b263d4bfc96cd5e7de6af4d527a847853d6781737eeea20bc273",
+    "filename": "mug.svg",
+    "height": 480,
+    "id": "pf-mug",
+    "mime": "image/svg+xml",
+    "name": "Demo mug",
+    "url": "/assets/demo/mug.svg",
+    "width": 480
+  },
+  {
+    "alt_text": "Illustrated synthetic linen",
+    "checksum": "5e315fbc89d3b00a55179873b213b28674a4c133828886330f99331ca60694c2",
+    "filename": "linen.svg",
+    "height": 480,
+    "id": "pf-linen",
+    "mime": "image/svg+xml",
+    "name": "Demo linen",
+    "url": "/assets/demo/linen.svg",
+    "width": 480
+  },
+  {
+    "alt_text": "Illustrated synthetic notebook",
+    "checksum": "5f72c0d1bc6db0683039403480b436de77f9b0887342aa5c7d1d72548648c5df",
+    "filename": "notebook.svg",
+    "height": 480,
+    "id": "pf-notebook",
+    "mime": "image/svg+xml",
+    "name": "Demo notebook",
+    "url": "/assets/demo/notebook.svg",
+    "width": 480
+  },
+  {
+    "alt_text": "Illustrated synthetic tray",
+    "checksum": "903881809ff9d702d1571e017b5c08bd48f863c75441fa21ca73db95b4f7dee1",
+    "filename": "tray.svg",
+    "height": 480,
+    "id": "pf-tray",
+    "mime": "image/svg+xml",
+    "name": "Demo tray",
+    "url": "/assets/demo/tray.svg",
+    "width": 480
+  },
+  {
+    "alt_text": "Illustrated synthetic pouch",
+    "checksum": "76185c80316266eadad44d6354580fb37fbc2959c551b43c3cdbbb73f12d7737",
+    "filename": "pouch.svg",
+    "height": 480,
+    "id": "pf-pouch",
+    "mime": "image/svg+xml",
+    "name": "Demo pouch",
+    "url": "/assets/demo/pouch.svg",
+    "width": 480
+  }
+]

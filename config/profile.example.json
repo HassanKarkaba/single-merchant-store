@@ -1,0 +1,36 @@
+{
+  "format": "sme.portfolio-profile/1",
+  "profile": "demo-test",
+  "providers": {
+    "mode": "deterministic",
+    "outbound_network": false
+  },
+  "environment_id": "${SME_ENVIRONMENT_ID}",
+  "merchant_id": "${SME_MERCHANT_ID}",
+  "machine_principal_id": "${SME_MACHINE_PRINCIPAL_ID}",
+  "release_id": "${SME_RELEASE_ID}",
+  "origin": "https://localhost:8443",
+  "proxy_peer": "127.0.0.1",
+  "database_ref": "${SME_DATABASE_REF}",
+  "identity_receipt_key_ref": "${SME_IDENTITY_RECEIPT_KEY_REF}",
+  "simulator_callback_key_ref": "${SME_SIMULATOR_CALLBACK_KEY_REF}",
+  "workload_credential_ref": "${SME_WORKLOAD_CREDENTIAL_REF}",
+  "totp_root": "${SME_TOTP_ROOT}",
+  "renderer_socket": "${SME_RENDERER_SOCKET}",
+  "seed_credentials_ref": "${SME_SEED_CREDENTIALS_REF}",
+  "disposable_proof_file": "${SME_DISPOSABLE_PROOF_FILE}",
+  "mail": {
+    "mode": "smtp",
+    "public_origin": "https://localhost:8443",
+    "from_address": "${SME_SMTP_FROM_ADDRESS}",
+    "from_name": "Single Merchant Store",
+    "host": "${SME_SMTP_HOST}",
+    "port": 587,
+    "security": "starttls",
+    "username": "${SME_SMTP_USERNAME}",
+    "password_ref": "${SME_SMTP_PASSWORD_REF}",
+    "timeout_seconds": 3,
+    "max_attempts": 8,
+    "queue_key_ref": "${SME_MAIL_QUEUE_KEY_REF}"
+  }
+}

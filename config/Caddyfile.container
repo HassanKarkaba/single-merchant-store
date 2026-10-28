@@ -1,0 +1,47 @@
+{
+  admin off
+  skip_install_trust
+  auto_https disable_redirects
+  local_certs
+  servers {
+    protocols h1 h2
+    timeouts {
+      read_header 5s
+      read_body 10s
+      write 30s
+      idle 30s
+    }
+  }
+}
+https://localhost:8443 {
+  bind 0.0.0.0
+  tls internal
+  request_body {
+    max_size 1MB
+  }
+  @mail_root path /local-mail
+  redir @mail_root /local-mail/ 308
+  handle_path /local-mail/* {
+    reverse_proxy 127.0.0.1:8025 {
+      header_up Host 127.0.0.1:8025
+      transport http {
+        dial_timeout 2s
+        response_header_timeout 5s
+      }
+    }
+  }
+  handle {
+    @forbidden path /api/v1/sandbox/* /api/v1/logout /callbacks/*
+    respond @forbidden 404
+    reverse_proxy 127.0.0.1:8080 {
+      header_up Host localhost:8443
+      header_up X-Forwarded-Host localhost:8443
+      header_up X-Forwarded-Proto https
+      header_up -Forwarded
+      transport http {
+        dial_timeout 2s
+        response_header_timeout 30s
+      }
+    }
+  }
+}

@@ -1,0 +1,2 @@
+export const MERCHANT_NAV = [['overview', 'Overview'], ['catalog', 'Catalog'], ['pricing', 'Prices'], ['promotions', 'Promotions'], ['stock', 'Inventory'], ['orders', 'Orders & fulfillment'], ['returns', 'Returns & exchanges'], ['finance', 'Finance & reconciliation'], ['investigation', 'Investigation'], ['settings', 'Store settings']] as const;
+export const CATEGORY_COLORS = ['#d5ddd0', '#e4d8c9', '#d7dbe0', '#dfe0ca', '#ddd4ca', '#cfdad7'];
